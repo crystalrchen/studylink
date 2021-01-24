@@ -107,10 +107,10 @@
       <div class="l-style">
         <p>Learning Style</p>
         <select name="style" id="style">
-          <option value="vis">Visual</option>
-          <option value="kin">Kinesthetic</option>
-          <option value="audi">Auditory</option>
-          <option value="r-w">Reading/writing</option>
+          <option value="visual">Visual</option>
+          <option value="kinesthetic">Kinesthetic</option>
+          <option value="auditory">Auditory</option>
+          <option value="reading/writing">Reading/writing</option>
         </select>
         <br><br>
       </div>
@@ -124,9 +124,10 @@
         </select>
         <br><br>
       </div>
-      <a class="js-scroll-trigger" href="#results">
+      <a href="#results" class="js-scroll-trigger" onclick="onArrowClick()">
         <img src="assets/arrow.png" type="image" alt="arrow" class="arrow">
       </a>
+      
     </section>
     <section id="results">
       <p id="summary-heading">Find your next study buddy:</p>
@@ -137,13 +138,13 @@
         <p id="summary-time">Time Preference: </p>
         <div id="click-here">
           <span>Click</span> 
-          <a class="js-scroll-trigger" href="#fill-out-info">
+          <a class="js-scroll-trigger" href="#fill-out-info" onclick="changeInfo()">
             <span class="here">here</span>
           </a>
           <span>to change!</span>
         </div>
       </div>
-      <a href="find.html">
+      <a onclick="findBuddies()">
         <img src="assets/go-button.png" type="image" class="go-button">
       </a>
     </section>

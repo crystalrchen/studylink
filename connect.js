@@ -5,26 +5,65 @@ if (logoutButton) {
   logoutButton.addEventListener("click", function () {
     firebase.auth().signOut().then(() => {
       // Sign-out successful.
-      window.location ="index.html";
+      window.location = "index.html";
     }).catch((error) => {
-      // An error happened.
       alert(error.message);
     });
   });
 }
 
 
-Sarah Wheeler, swheeler087@gmail.com, College freshman, CSE 340 Visual, Interaction Programming, Morning
-Jennifer Anderson, jennyanders642@gmail.com, College junior, Auditory, CSE 446 Machine Learning, Afternoon
-Blake Walker, starwars7563@yahoo.com, College freshman, Visual, CSE 331 Software Design & Implementation, Night
-Sky Trainer, strainer74@gmail.com, College senior, Reading/writing, CSE 142 Computer Programming I, Morning
-Jordan Row, jordanrowww74@hotmail.com, College sophomore, Kinesthetic, CSE 331 Software Design & Implementation, Night
+let gradeVal = "";
+let styleVal = "";
+let courseVal = "";
+let timeVal = "";
 
-users = {
+let courseText = "";
+let styleText = "";
+let timeText = "";
 
-  "Sarah Wheeler" : ["swheeler087@gmail.com", "College freshman", "Visual", "CSE 340 Interaction Programming", "Morning"]
+let summmaryCourse = "";
+let summaryStyle = "";
+let summaryTime = "";
 
 
+function onArrowClick() {
+  //getting selected values of each dropdown
+  const grade = document.querySelector("#grade");
+  gradeVal = grade.options[grade.selectedIndex].value;
+
+  const course = document.querySelector("#class");
+  courseVal = course.options[course.selectedIndex].value;
+  const courseText = course.options[course.selectedIndex].text;
+
+  const style = document.querySelector("#style");
+  styleVal = style.options[style.selectedIndex].value;
+  const styleText = style.options[style.selectedIndex].text;
+
+  const time = document.querySelector("#time");
+  timeVal = time.options[time.selectedIndex].value;
+  const timeText = time.options[time.selectedIndex].text;
+
+  summmaryCourse = document.querySelector("#summary-class").innerHTML = "Class: " + courseText;
+  summaryStyle = document.querySelector("#summary-style").innerHTML = "Learning Style: " + styleText;
+  summaryTime = document.querySelector("#summary-time").innerHTML = "Time Preference: " + timeText;
 
 }
-         
+
+function changeInfo(){
+  summmaryCourse = document.querySelector("#summary-class").innerHTML = "Class: ";
+  summaryStyle = document.querySelector("#summary-style").innerHTML = "Learning Style: ";
+  summaryTime = document.querySelector("#summary-time").innerHTML = "Time Preference: ";
+
+}
+
+
+function findBuddies(){
+  if (!(gradeVal || courseVal || styleVal || timeVal)){
+    alert("Please enter your preferences for us to match you better!");
+    return;
+  }
+  else {
+    window.location ="find.html"+"?gradeVal="+gradeVal+"&courseVal="+courseVal+"&styleVal="+styleVal+"&timeVal="+timeVal;
+  } 
+}
