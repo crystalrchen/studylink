@@ -12,7 +12,6 @@ if (logoutButton) {
   });
 }
 
-
 let gradeVal = "";
 let styleVal = "";
 let courseVal = "";
@@ -34,15 +33,15 @@ function onArrowClick() {
 
   const course = document.querySelector("#class");
   courseVal = course.options[course.selectedIndex].value;
-  const courseText = course.options[course.selectedIndex].text;
-
+  courseText = course.options[course.selectedIndex].text;
+ 
   const style = document.querySelector("#style");
   styleVal = style.options[style.selectedIndex].value;
-  const styleText = style.options[style.selectedIndex].text;
+  styleText = style.options[style.selectedIndex].text;
 
   const time = document.querySelector("#time");
   timeVal = time.options[time.selectedIndex].value;
-  const timeText = time.options[time.selectedIndex].text;
+  timeText = time.options[time.selectedIndex].text;
 
   summmaryCourse = document.querySelector("#summary-class").innerHTML = "Class: " + courseText;
   summaryStyle = document.querySelector("#summary-style").innerHTML = "Learning Style: " + styleText;
@@ -64,6 +63,6 @@ function findBuddies(){
     return;
   }
   else {
-    window.location ="find.html"+"?gradeVal="+gradeVal+"&courseVal="+courseVal+"&styleVal="+styleVal+"&timeVal="+timeVal;
+    window.location ="find.html"+"?gradeVal="+gradeVal+"&courseText="+courseText+"&styleVal="+styleVal+"&timeVal="+timeVal;
   } 
 }

@@ -13,5 +13,7 @@ const auth = firebase.auth();
 
 const db = firebase.firestore();
 
+var provider = new firebase.auth.GoogleAuthProvider();
+
 //update firestore settings
 db.settings({ timestampsInSnapshots : true})
