@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>study/link</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;700&display=swap" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="script.js"> </script>
+
+    <script src="vendor/jquery/jquery.js">
+    </script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous">
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js">
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js">
+    </script>
+  </head>
+  <style>
+    body {
+      background-color:#EBEEFF;
+    }
+  </style>
+
+  <body>
+    <section id="challenges-list">
+      <div class="logo">
+        <a href="index.html" id="logo">
+          <span class="hr1">study</span><!--
+          --><span class="hr2">/</span><!--
+          --><span class="hr3">link</span>
+          </a>
+        </div> 
+        
+        <div class="navbar-links">
+          <ul>
+            <li><a class="homepage" href="index.html">Homepage</a></li>
+            <li><a class="connect" href="connect.html">Connect</a></li>
+            <li><a class="leaderboard" href="leaderboard.html">Leaderboard</a></li>
+            <li><a class="challenges" href="challenges.html">Challenges</a></li>
+            <li><button id="logout-button" class="logout">Logout</button></li>
+          </ul>
+        </div>
+
+      <div class="c-lges">
+       <p>Challenges</p>
+      </div>
+
+      <div class="comp">
+        <span>Complete challenges, earn studypoints and exchange for</span>
+        <a class="js-scroll-trigger" href="#rewards">
+          <span class="rewards">rewards</span>
+        </a>
+      </div>
+      <div class="all-challenges">
+        <span class="challenge-boxes">
+        <img src="assets/challenges/challenge1.png" type="image" class="challenge1" height="70%">
+        </span>
+        <span class="challenge-boxes">
+          <img src="assets/challenges/challenge2.png" type="image" class="challenge2" height="70%">
+        </span>
+        <span class="challenge-boxes">
+          <img src="assets/challenges/challenge3.png" type="image" class="challenge3" height="70%">
+        </span>
+        <span class="challenge-boxes">
+          <img src="assets/challenges/challenge4.png" type="image" class="challenge4" height="70%">
+        </span>
+        <span class="challenge-boxes">
+          <img src="assets/challenges/challenge5.png" type="image" class="challenge5" height="70%">
+        </span>
+        <span class="challenge-boxes">
+          <img src="assets/challenges/challenge6.png" type="image" class="challenge6" height="70%">
+        </span>
+      </div>
+    </section>
+    <section id="rewards">
+      <div class="rewards-title">
+        <p>Rewards</p>
+      </div>
+      <div class="rewards-intro">
+        <span>Exchange your studypoints for rewards!</span>
+      </div>
+      <p id="points">Your studypoints: 0</p>
+      <div class="all-rewards">
+        <span class="reward-boxes">
+        <img src="assets/rewards/reward1.png" type="image" class="reward1" height="70%">
+        </span>
+        <span class="reward-boxes">
+          <img src="assets/rewards/reward2.png" type="image" class="reward2" height="70%">
+        </span>
+        <span class="reward-boxes">
+          <img src="assets/rewards/reward3.png" type="image" class="reward3" height="70%">
+        </span>
+      </div>
+    </section>      
+
+      
+    <script type="text/javascript" src="js/scrolling-nav.js"></script> 
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js">
+	</script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js">
+	</script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-firestore.js">
+	</script>
+  <script src="firebase-init.js"></script>
+    <script src="connect.js"></script> 
+  </body>
+</html>

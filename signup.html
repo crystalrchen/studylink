@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>study/link</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	 crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
+
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<a href="index.html" class="back-button">
+		<img src="assets/back-button.png" type="image" alt="back-button">
+    </a>
+    <div class="signup-container">
+      <div class="regist-er">
+        <p>Register</p>
+      </div>
+      <img src="assets/line.png" alt="line" type="image" class="line">
+      <div class="email-ad">
+        <label for="email">Email address*</label>
+        <br>
+      </div>
+      <div class="input-email">
+        <input type="email" id="email" name="email" placeholder="Enter email address" required>
+      </div>
+      <div class="create-pass">
+        <label for="password">Password*</label>
+        <br>
+      </div>
+      <div class="input-pass">
+        <input type="password" id="password" name="password" placeholder="Enter password" required>
+      </div>
+      <!-- <div class="repeat-pass">
+        <label for="password-repeat">Repeat password*</label>
+        <br>
+      </div>
+      <div class="input-repeat-pass">
+        <input type="password" id="password-repeat" name="password-repeat" placeholder="Repeat password" required>
+      </div> -->
+      <div class="disclaimer">
+        <p>By clicking register, you are agreeing to the terms & conditions. </p>
+      </div>
+      <button id="register-account" class="register-button">
+        Register Account</button>
+      <img src="assets/register-or.png" alt="or" type="image" class="or">
+      <img src="assets/google-register.png" alt="google-register" type="image" class="google-register">
+      <div class="login-here">
+        <span>Already have an account? Log in</span>
+        <a href="login.html">
+          <span id="login-here">here</span>
+        </a>
+        <span>→</span>
+      </div>
+
+          
+    </div>
+    
+    <a href="index.html">
+      <img src="assets/circle-logo.png" class="circle-logo" alt="logo">
+    </a>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js">
+	</script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js">
+	</script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-firestore.js">
+	</script>
+  <script src="firebase-init.js"></script>
+<script src="signup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>study/link</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	 crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="script.js">
+
+	</script>
+
+	<script src="vendor/jquery/jquery.js">
+
+	</script>
+	<script src="vendor/jquery-easing/jquery.easing.min.js">
+
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+	 crossorigin="anonymous">
+
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+	 crossorigin="anonymous">
+
+	</script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js">
+
+	</script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js">
+
+	</script>
+</head>
+
+<body>
+	<section id="fill-out-info">
+		<div class="logo">
+			<a href="index.html" id="logo">
+				<span class="hr1">study</span><!--
+        --><span class="hr2">/</span><!--
+        --><span class="hr3">link</span>
+        </a>
+      </div> 
+      
+      <div class="navbar-links">
+        <ul>
+          <li><a class="homepage" href="index.html">Homepage</a></li>
+          <li><a class="connect" href="connect.html">Connect</a></li>
+          <li><a class="leaderboard" href="leaderboard.html">Leaderboard</a></li>
+          <li><a class="challenges" href="challenges.html">Challenges</a></li>
+          <li><button id="logout-button" class="logout">Logout</button></li>
+        </ul>
+      </div>
+      
+      <div class="welcome">
+        <p>Welcome to study/link!</p>
+      </div>
+      <div class="please">
+        <p>Please complete the following steps to find your next study buddy.</p>
+      </div>
+    
+      <div class="class-info">
+        <p>Class Information</p>
+        
+      </div>
+
+      <div class="learn-p">
+          <p>Learning Preferences</p>
+          </div>
+
+      <div class="g-level">
+        <p>Grade Level</p>
+        <select name="grade" id="grade">
+          <!-- <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option> -->
+          <option value="freshman">College freshman</option>
+          <option value="sophomore">College sophomore</option>
+          <option value="junior">College junior</option>
+          <option value="senior">College senior</option>
+        </select>
+        <br><br>
+      </div>
+
+      <div class="c-taking">
+        <p>Name of Course</p>
+        <select name="class" id="class">
+          <!-- <option value="a">🎓 Pick a course</option> -->
+          <option value="142">CSE 142 Computer Programming I</option>
+          <option value="311">CSE 311 Foundations of Computing I</option>
+          <option value="331">CSE 331 Software Design & Implementation</option>
+          <option value="340">CSE 340 Interaction Programming</option>
+          <option value="341">CSE 341 Programming Languages</option>
+          <option value="332">CSE 332 Data Abstractions </option>
+          <option value="446">CSE 446 Machine Learning </option>
+        </select>
+        <br><br>
+      </div>
+
+      <div class="l-style">
+        <p>Learning Style</p>
+        <select name="style" id="style">
+          <option value="vis">Visual</option>
+          <option value="kin">Kinesthetic</option>
+          <option value="audi">Auditory</option>
+          <option value="r-w">Reading/writing</option>
+        </select>
+        <br><br>
+      </div>
+
+      <div class="time-p">
+        <p>Study Time Preference</p>
+        <select name="time" id="time">
+          <option value="morning">Morning</option>
+          <option value="afternoon">Afternoon</option>
+          <option value="night">Night</option>
+        </select>
+        <br><br>
+      </div>
+      <a class="js-scroll-trigger" href="#results">
+        <img src="assets/arrow.png" type="image" alt="arrow" class="arrow">
+      </a>
+    </section>
+    <section id="results">
+      <p id="summary-heading">Find your next study buddy:</p>
+      <div class="summary">
+        <p id="summary-title">Summary</p>
+        <p id="summary-class">Class: </p>
+        <p id="summary-style">Learning Style: </p>
+        <p id="summary-time">Time Preference: </p>
+        <div id="click-here">
+          <span>Click</span> 
+          <a class="js-scroll-trigger" href="#fill-out-info">
+            <span class="here">here</span>
+          </a>
+          <span>to change!</span>
+        </div>
+      </div>
+      <a href="find.html">
+        <img src="assets/go-button.png" type="image" class="go-button">
+      </a>
+    </section>
+
+  
+    <script type="text/javascript" src="js/scrolling-nav.js"></script> 
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js">
+	</script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js">
+	</script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-firestore.js">
+	</script>
+  <script src="firebase-init.js"></script>
+    <script src="connect.js"></script> 
+  </body>
+</html>
