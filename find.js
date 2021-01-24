@@ -15,7 +15,13 @@ users = {
   "Jennifer Anderson": ["jennyanders642@gmail.com", "junior", "auditory", "CSE 446 Machine Learning", "afternoon"],
   "Blake Walker": ["starwars7563@yahoo.com", "freshman", "visual", "CSE 331 Software Design & Implementation", "night"],
   "Sky Trainer": ["strainer74@gmail.com", "senior", "reading/writing", "CSE 142 Computer Programming I", "morning"],
-  "Jordan Row": ["jordanrowww74@hotmail.com", "sophomore", "kinesthetic", "CSE 331 Software Design & Implementation", "night"]
+	"Atticus Smith": ["asmith2@gmail.com", "junior", "visual", "CSE 331 Software Design & Implementation", "night"],
+  "Jordan Row": ["jordanrowww74@hotmail.com", "sophomore", "kinesthetic", "CSE 331 Software Design & Implementation", "night"], 
+  "Rebecca Moore": ["moore84@gmail.com", "senior", "auditory", "CSE 142 Computer Programming I", "night"],
+  "Keegan Johnson": ["keeganjohnson@gmail.com", "junior", "visual", "CSE 331 Software Design & Implementation", "night"],
+  "Rachael Lee": ["rlee78@gmail.com", "sophomore", "reading/writing", "CSE 340 Interaction Programming", "morning"],
+  "Sierra Whittington": ["whittington1@yahoo.com", "senior", "visual", "CSE 446 Machine Learning", "afternoon"],
+  "Byte Hacker": ["hacker101@yahoo.com", "senior", "kinesthetic", "CSE 142 Computer Programming I", "morning"]
 };
 
 let foundBuddies = document.querySelector("#found-buddies");
@@ -61,7 +67,7 @@ for (const [key, value] of Object.entries(users)) {
       timeDisp = "<br> Time: "+ value[4].charAt(0).toUpperCase() + value[4].slice(1);
     }
 
-    foundBuddies.innerHTML += "<br><br><br>"
+    foundBuddies.innerHTML += "<br><br><br><br>"
                         + "<h3 class='buddy-names'> " + key + "</h3>" 
                         + "<p class='buddies-list'> Email: " + value[0] 
                         + gradeDisp

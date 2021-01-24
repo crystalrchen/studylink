@@ -14,3 +14,22 @@ loginButton.addEventListener("click", function () {
   .catch((error) => {
     alert(error.message);
   });
+
+});
+}
+
+
+const googleSignInButton = document.querySelector("#google-login-button");
+googleSignInButton.addEventListener("click", function () {
+  firebase.auth()
+    .signInWithPopup(provider)
+    .then((result) => {
+      var user = result.user;
+      localStorage.setItem('___user___', JSON.stringify(user));
+      if (user) {
+        window.location = 'connect.html';
+      }
+    }).catch((error) => {
+       alert(error.message);
+    });
+});

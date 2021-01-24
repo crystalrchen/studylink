@@ -593,22 +593,31 @@ iframe {
   font-size: 3.5vh;
   color: #000000;
 }
-#no-other-matches, #try-again {
-  margin-top: 145vh;
+.no-other-matches, #try-again {
+  margin-top: 23vh;
   font-family: Poppins;
-  margin-left: 42vw;
+  margin-left: 41vw;
   position: absolute;
   color: rgba(0, 0, 0, 0.52);
-  font-size: 2vh;
-  font-style: italic; 
+  font-size: 3vh;
+  padding-bottom: 2vh;
+}
+.no-other-matches2 {
+  margin-top: 23vh;
+  font-family: Poppins;
+  margin-left: 50.2vw;
+  position: absolute;
+  color: rgba(0, 0, 0, 0.52);
+  font-size: 3vh;
+  padding-bottom: 2vh;
 }
 #try-again {
   text-decoration: underline;
-  margin-left: 53vw;
-  padding-bottom: 5vh;
+  margin-left: 45.8vw;
+  color: rgba(0, 0, 0, 0.52);
 }
 #try-again:hover {
-  opacity: 0.8;
+  color: black;
   cursor: pointer;
 }
 #found-buddies {
